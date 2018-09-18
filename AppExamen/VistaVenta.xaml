@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.VistaVenta"
+             Title="Editar venta">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Ventas" Order="Primary" Icon="aceptar.png" Text="Guardar" Priority="0" Clicked="ActualizarRegistro" />
+        <ToolbarItem Name="Ventas" Order="Primary" Icon="borrar.png" Text="Borrar" Priority="1" Clicked="EliminarCliente" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="10">
+            <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+            <Button x:Name="Fecha" Text="Añadir fecha" Clicked="Fecha_Clicked" Image="calendario.png"/>
+            <Button x:Name="Cliente" Text="Añadir cliente" Clicked="Cliente_Clicked" Image="cliente.png"/>
+            <Button x:Name="Producto" Text="Añadir producto" Clicked="Producto_Clicked" Image="producto.png"/>
+            <StackLayout Orientation="Vertical" BackgroundColor="LightGray">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="13, 5, 5, 5" BackgroundColor="LightGray">
+                    <Switch x:Name="recordar" BackgroundColor="Green"/>
+                    <Label x:Name="Pago" Text="PAGADO" FontSize="14" Margin="97, 0, 0, 0" TextColor="Black" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

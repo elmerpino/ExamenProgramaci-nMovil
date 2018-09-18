@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Calendario_aux"
+             Title="Calendario">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="aceptar.png" Text="Seleccionar" Priority="0" Clicked="Fecha_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <DatePicker 
+                MinimumDate="09/14/2018" MaximumDate="12/31/2018" DateSelected="DatePicker_DateSelected" HorizontalOptions="Center" FontSize="30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

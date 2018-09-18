@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Opciones"
+             Title="Opciones">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="cliente" Text="Clientes" Clicked="cliente_clicked" Image="cliente.png"/>
+            <Button x:Name="producto" Text="Productos" Clicked="producto_clicked" Image="producto.png"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

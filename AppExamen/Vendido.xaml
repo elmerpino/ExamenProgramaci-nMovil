@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.Vendido"
+             Title="Ventas">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Venta" Order="Primary" Icon="mas.png" Text="Agregar" Priority="0" Clicked="Venta_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <!--AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"-->
+
+        <StackLayout BackgroundColor="White">
+            <!-- Place new controls here -->
+
+            <ListView x:Name="lst" HasUnevenRows="True" Margin="15,5,15,15" ItemTapped="ItemSeleccionado">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Brown" BackgroundColor="White" Margin="5" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+
+                                        <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                            <Button Image="cliente.png" BackgroundColor="White" FontSize="14"/>
+                                            <Label Text="{Binding Cliente}" TextColor="Brown" FontSize="Small" VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                            <Button Image="producto.png" BackgroundColor="White" FontSize="14" IsEnabled="True"/>
+                                            <Label Text="{Binding Producto}" TextColor="Brown" FontSize="Small" VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                            <Button Image="costo.png" BackgroundColor="White" FontSize="14"/>
+                                            <Label Text="{Binding Costo}" TextColor="Brown" FontSize="Small" VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                                            <Button Image="calendario.png" BackgroundColor="White" FontSize="14"/>
+                                            <Label Text="{Binding Fecha}" TextColor="Brown" FontSize="Small" VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+        <!--/-->
+    </ContentPage.Content>
+
+</ContentPage>

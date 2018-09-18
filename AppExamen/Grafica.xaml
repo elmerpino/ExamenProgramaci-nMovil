@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Graficas"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="AppExamen.Grafica"
+             Title="Graficas">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <StackLayout HorizontalOptions="Center" Margin="10">
+                    <Label Text="Los productos mas solicitados" FontAttributes="Bold" FontSize="Large"/>
+                </StackLayout>
+                <StackLayout>
+                    <forms:ChartView x:Name="GraficoProducto" HeightRequest="150"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Margin="10">
+                    <Label Text="Los clientes mas concurrentes" FontAttributes="Bold" FontSize="Large"/>
+                </StackLayout>
+                <StackLayout>
+                    <forms:ChartView x:Name="GraficoCliente" HeightRequest="150"/>
+                </StackLayout>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

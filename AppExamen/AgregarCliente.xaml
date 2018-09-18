@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppExamen.AgregarCliente"
+             Title="Agregar Cliente">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="aceptar.png" Text="Guardar" Priority="0" Clicked="MenuItem1_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <Label Text="Nombre" FontSize="Medium"/>
+                <Entry x:Name="nombre"/>
+                <Label Text="Teléfono" FontSize="Medium"/>
+                <Entry x:Name="telefono" />
+                <Label Text="Corre electrónico" FontSize="Medium"/>
+                <Entry x:Name="email" />
+                <Label Text="Comentarios:" FontSize="Medium"/>
+                <Editor x:Name="comentarios" HeightRequest="150"/>
+                <Label Text="Foto URL" FontSize="Medium"/>
+                <Entry x:Name="foto"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>
